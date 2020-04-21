@@ -1,0 +1,48 @@
+/* VARIABLES & MIXINS */
+$darkBlue: #1c7ccc;
+$lightBlue: #0394fc;
+$yellow: #ffda21;
+$yellowHover: #ffe24f;
+$perspective: 1000px;
+
+@mixin transformStyles($scale, $transform, $webkitTransform) {
+  -webkit-transform: $scale;
+  -ms-transform: $scale;
+  transform: $scale;
+  -webkit-transition: $webkitTransform;
+  transition: $webkitTransform;
+  -o-transition: $transform;
+  transition: $transform;
+  transition: $transform, $webkitTransform;
+}
+
+@mixin transitioning($time) {
+  -webkit-transition: $time;
+  -o-transition: $time;
+  transition: $time;
+}
+
+@mixin flex () {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin centeredFlex () {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin flexWrap ($value) {
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin boxShadow ($value) {
+    -webkit-box-shadow: $value;    
+    box-shadow: $value;
+}

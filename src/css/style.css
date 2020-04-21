@@ -1,0 +1,136 @@
+/* VARIABLES & MIXINS */
+/* APP STYLES */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  padding: 10px;
+  background: #1c7ccc;
+}
+
+h1, .game-over p.game-over-message {
+  font-family: "Chewy", cursive;
+  font-size: 5rem;
+  color: #ffda21;
+  text-align: center;
+  margin: 20px auto 40px;
+}
+
+.memory-game {
+  margin: auto;
+  max-width: 1210px;
+  width: auto;
+  min-height: 620px;
+  padding: 20px;
+  background: #0394fc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.card-img, .memory-card {
+  width: 185px;
+  height: 275px;
+}
+
+.memory-card {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  margin: 5px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.memory-card:active {
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.memory-card.flip,
+.front-img {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.front-img,
+.back-img {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  position: absolute;
+  border-radius: 5px;
+  background: #1c7ccc;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.game-over {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.game-over p.game-over-message {
+  font-size: 2rem;
+}
+.game-over img {
+  width: 300px;
+  display: block;
+  margin-bottom: 60px;
+}
+.game-over button#new-game-btn {
+  padding: 20px 30px;
+  background: #ffda21;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.game-over button#new-game-btn:hover {
+  background-color: #ffe24f;
+  -webkit-box-shadow: 0 0 40px yellow;
+  box-shadow: 0 0 40px yellow;
+}
